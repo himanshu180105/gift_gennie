@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gift Gennie — Perfect Birthday Gift Suggestions</title>
+  <meta name="description" content="Gift Gennie helps you find the perfect birthday gift for anyone. Enter their name, age, and your relation to get personalized, thoughtful gift ideas instantly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-particles" id="bgParticles"></div>
+  <div class="confetti-container" id="confettiContainer"></div>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🧞</span>
+        <span class="logo-text">Gift Gennie</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#finder" class="nav-link">Find Gifts</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">✨ Smart Gift Suggestions</div>
+      <h1 class="hero-title">
+        The Perfect Birthday Gift,<br />
+        <span class="gradient-text">Every Single Time</span>
+      </h1>
+      <p class="hero-subtitle">
+        Stop stressing over what to give. Tell us about the birthday person and we'll curate the most thoughtful, personalized gift suggestions — instantly.
+      </p>
+      <a href="#finder" class="cta-btn">
+        <span>Find the Perfect Gift</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">50K+</span><span class="stat-label">Happy Gifters</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">200+</span><span class="stat-label">Gift Ideas</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">4.9★</span><span class="stat-label">Rating</span></div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <div class="hero-glow"></div>
+      <img src="birthday_hero.jpg" alt="Beautiful birthday gifts" class="hero-img" />
+    </div>
+  </section>
+
+  <section class="how-section" id="how-it-works">
+    <div class="section-label">Simple Process</div>
+    <h2 class="section-title">How Gift Gennie Works</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-icon">📝</div>
+        <h3>Tell Us About Them</h3>
+        <p>Share their name, your relation, and their age to personalize the experience.</p>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-icon">🤖</div>
+        <h3>We Analyze & Curate</h3>
+        <p>Our smart engine matches thousands of gift ideas to their profile.</p>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-icon">🎁</div>
+        <h3>Get Perfect Suggestions</h3>
+        <p>Receive tailored gift ideas across budget ranges — ready to buy!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="finder-section" id="finder">
+    <div class="finder-card">
+      <div class="finder-header">
+        <div class="finder-icon-wrap">🎂</div>
+        <h2 class="finder-title">Find the Perfect Gift</h2>
+        <p class="finder-subtitle">Answer a few quick questions about the birthday person</p>
+      </div>
+      <form class="gift-form" id="giftForm" novalidate>
+        <div class="form-group" id="group-name">
+          <label class="form-label" for="recipientName">
+            <span class="label-icon">👤</span> Recipient's Name
+          </label>
+          <input type="text" id="recipientName" class="form-input" placeholder="e.g. Priya, Rahul, Emma…" autocomplete="off" maxlength="50" />
+          <span class="form-error" id="err-name">Please enter their name.</span>
+        </div>
+        <div class="form-group" id="group-relation">
+          <label class="form-label">
+            <span class="label-icon">💞</span> Your Relation
+          </label>
+          <div class="relation-grid" id="relationGrid">
+            <button type="button" class="relation-btn" data-value="best friend" id="rel-best-friend"><span class="relation-emoji">👯</span><span>Best Friend</span></button>
+            <button type="button" class="relation-btn" data-value="friend" id="rel-friend"><span class="relation-emoji">🤝</span><span>Friend</span></button>
+            <button type="button" class="relation-btn" data-value="partner" id="rel-partner"><span class="relation-emoji">💑</span><span>Partner</span></button>
+            <button type="button" class="relation-btn" data-value="mother" id="rel-mother"><span class="relation-emoji">👩</span><span>Mother</span></button>
+            <button type="button" class="relation-btn" data-value="father" id="rel-father"><span class="relation-emoji">👨</span><span>Father</span></button>
+            <button type="button" class="relation-btn" data-value="sister" id="rel-sister"><span class="relation-emoji">👧</span><span>Sister</span></button>
+            <button type="button" class="relation-btn" data-value="brother" id="rel-brother"><span class="relation-emoji">👦</span><span>Brother</span></button>
+            <button type="button" class="relation-btn" data-value="colleague" id="rel-colleague"><span class="relation-emoji">💼</span><span>Colleague</span></button>
+            <button type="button" class="relation-btn" data-value="boss" id="rel-boss"><span class="relation-emoji">🏆</span><span>Boss</span></button>
+            <button type="button" class="relation-btn" data-value="child" id="rel-child"><span class="relation-emoji">🧒</span><span>Child</span></button>
+            <button type="button" class="relation-btn" data-value="grandparent" id="rel-grandparent"><span class="relation-emoji">👴</span><span>Grandparent</span></button>
+            <button type="button" class="relation-btn" data-value="crush" id="rel-crush"><span class="relation-emoji">😍</span><span>Crush</span></button>
+          </div>
+          <span class="form-error" id="err-relation">Please select your relation.</span>
+        </div>
+        <div class="form-group" id="group-age">
+          <label class="form-label" for="recipientAge">
+            <span class="label-icon">🎂</span> Their Age
+          </label>
+          <div class="age-input-wrap">
+            <input type="number" id="recipientAge" class="form-input age-input" placeholder="e.g. 25" min="1" max="120" />
+            <span class="age-suffix">years old</span>
+          </div>
+          <div class="age-slider-wrap">
+            <input type="range" id="ageSlider" class="age-slider" min="1" max="100" value="25" />
+            <div class="age-markers"><span>1</span><span>25</span><span>50</span><span>75</span><span>100+</span></div>
+          </div>
+          <span class="form-error" id="err-age">Please enter a valid age (1–120).</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">
+            <span class="label-icon">💰</span> Budget Range
+          </label>
+          <div class="budget-grid" id="budgetGrid">
+            <button type="button" class="budget-btn" data-value="budget" id="bud-budget"><span class="budget-emoji">💵</span><span class="budget-label">Budget</span><span class="budget-amount">Under ₹500</span></button>
+            <button type="button" class="budget-btn active" data-value="mid" id="bud-mid"><span class="budget-emoji">💳</span><span class="budget-label">Mid-Range</span><span class="budget-amount">₹500–₹2,000</span></button>
+            <button type="button" class="budget-btn" data-value="premium" id="bud-premium"><span class="budget-emoji">💎</span><span class="budget-label">Premium</span><span class="budget-amount">₹2,000–₹10,000</span></button>
+            <button type="button" class="budget-btn" data-value="luxury" id="bud-luxury"><span class="budget-emoji">👑</span><span class="budget-label">Luxury</span><span class="budget-amount">₹10,000+</span></button>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span class="submit-text">✨ Generate Gift Ideas</span>
+          <div class="submit-loader" id="submitLoader">
+            <div class="loader-dot"></div><div class="loader-dot"></div><div class="loader-dot"></div>
+          </div>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <section class="results-section" id="resultsSection" style="display:none;">
+    <div class="results-header" id="resultsHeader">
+      <div class="results-confetti" id="resultsConfetti">🎉</div>
+      <h2 class="results-title" id="resultsTitle">Gift Ideas for <span id="recipientNameDisplay"></span>!</h2>
+      <p class="results-subtitle" id="resultsSubtitle"></p>
+    </div>
+    <div class="gifts-grid" id="giftsGrid"></div>
+    <div class="results-actions">
+      <button class="action-btn secondary" id="regenerateBtn">🔄 Regenerate Ideas</button>
+      <button class="action-btn primary" id="newSearchBtn">🔍 New Search</button>
+    </div>
+  </section>
+
+  <section class="testimonials-section" id="testimonials">
+    <div class="section-label">What People Say</div>
+    <h2 class="section-title">Loved by Gift-Givers</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"I was completely lost on what to give my dad for his 60th birthday. Gift Gennie suggested a leather-bound journal and a premium tea set — he absolutely loved it!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div><strong>Ananya S.</strong><br /><small>Mumbai</small></div>
+        </div>
+      </div>
+      <div class="testimonial-card featured">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Gifted my best friend exactly what Gift Gennie suggested — a custom illustration of her pet. She cried happy tears! This app is pure magic."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c)">R</div>
+          <div><strong>Rohan K.</strong><br /><small>Bangalore</small></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Finally, no more last-minute panic buying! The suggestions are so thoughtful and spot-on. I use it for every single birthday now."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">P</div>
+          <div><strong>Priya M.</strong><br /><small>Delhi</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo"><span>🧞 Gift Gennie</div>
+      <p class="footer-tagline">Making every birthday unforgettable, one gift at a time.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Contact</a>
+      </div>
+      <p class="footer-copy">© 2025 Gift Gennie. Made with ❤️ for thoughtful gifters everywhere.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
